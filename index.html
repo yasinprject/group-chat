@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Group Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Login Box -->
+  <div class="login" id="loginBox">
+    <h2>Enter Your Name</h2>
+    <input type="text" id="username" placeholder="Your name" />
+    <button onclick="joinChat()">Join Chat</button>
+  </div>
+
+  <!-- Chat Box -->
+  <div class="chat hidden" id="chatBox">
+    <div class="header">Group Chat</div>
+    <div class="messages" id="messages"></div>
+    <div class="input-box">
+      <input type="text" id="messageInput" placeholder="Type a message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <!-- Your JS -->
+  <script src="script.js"></script>
+</body>
+</html>
