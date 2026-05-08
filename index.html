@@ -2,26 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Group Chat</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Group Chat</title>
+  <!-- অ্যাপের মতো ফিল দেওয়ার জন্য মেটা ট্যাগ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" href="style.css" />
+  <!-- আইকনের জন্য FontAwesome (Optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
   <!-- Login Box -->
-  <div class="login" id="loginBox">
-    <h2>Enter Your Name</h2>
-    <input type="text" id="username" placeholder="Your name" />
-    <button onclick="joinChat()">Join Chat</button>
+  <div class="login-container" id="loginBox">
+    <div class="login-card">
+      <h2>Welcome to Chat</h2>
+      <p>Enter your name to join</p>
+      <input type="text" id="username" placeholder="Your Name..." />
+      <button onclick="joinChat()">Join Chat</button>
+    </div>
   </div>
 
   <!-- Chat Box -->
-  <div class="chat hidden" id="chatBox">
-    <div class="header">Group Chat</div>
-    <div class="messages" id="messages"></div>
-    <div class="input-box">
+  <div class="chat-container hidden" id="chatBox">
+    <div class="chat-header">
+      <div class="user-info">
+        <div class="avatar"><i class="fas fa-users"></i></div>
+        <div class="status">
+          <h3>Group Chat</h3>
+          <p>Online</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="chat-messages" id="messages">
+      <!-- মেসেজ এখানে আসবে -->
+    </div>
+
+    <div class="chat-input">
       <input type="text" id="messageInput" placeholder="Type a message..." />
-      <button onclick="sendMessage()">Send</button>
+      <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
     </div>
   </div>
 
